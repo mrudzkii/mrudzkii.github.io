@@ -38,7 +38,7 @@ for i in range(2, 13):
             link = res['image'].split(' ')[0]
             podstrona.write("![Alt text](" + link + ')\n')
 
-with open('strona.md', 'w') as website:
+with open('buty/strona.md', 'w') as website:
     website.write('## Lista NAJLEPSZYCH butów jeśli chodzi o amortyzację\n')
     for but in buty.keys():
         website.write('- [' + but + '](' + but.strip() + '.md' + ')\n')
