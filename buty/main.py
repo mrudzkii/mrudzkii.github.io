@@ -19,7 +19,7 @@ for i in range(2, 13):
     specki = but.find_all('td')
     model = specki[0].text
     buty[model] = {}
-    with open(model + ".md", 'w') as podstrona:
+    with open(model.strip().replace(' ', '-') + ".md", 'w') as podstrona:
         podstrona.write('# ' + model + '\n')
         for j in range(1, len(specki)):
             buty[model][kolumnny[j]] = specki[j].text
@@ -38,8 +38,8 @@ for i in range(2, 13):
             link = res['image'].split(' ')[0]
             podstrona.write("![Alt text](" + link + ')\n')
 
-with open('buty/strona.md', 'w') as website:
+with open('strona.md', 'w') as website:
     website.write('## Lista NAJLEPSZYCH butów jeśli chodzi o amortyzację\n')
     for but in buty.keys():
-        website.write('- [' + but + '](' + but.strip() + '.md' + ')\n')
+        website.write('- [' + but.strip() + '](' + but.strip().replace(' ', '-').replace('\n', '') + '.md' + ')\n')
     website.write('### [źródło](' + url + ')\n')
