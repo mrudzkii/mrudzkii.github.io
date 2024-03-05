@@ -1,9 +1,3 @@
----
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
----
 ## Lista NAJLEPSZYCH butów jeśli chodzi o amortyzację
 - [adidas Ultraboost Light](adidas-Ultraboost-Light.md)
 - [Asics Gel-Nimbus 26](Asics-Gel-Nimbus-26.md)
@@ -17,4 +11,3 @@ layout: home
 - [Saucony Triumph 21](Saucony-Triumph-21.md)
 - [Salomon Aero Glide](Salomon-Aero-Glide.md)
 ### [źródło](https://pawelbiega.pl/buty-do-biegania-z-maksymalna-amortyzacja-przeglad/)
-
