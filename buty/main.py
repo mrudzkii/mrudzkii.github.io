@@ -5,7 +5,9 @@ from duckduckgo_search import DDGS
 
 url = 'https://pawelbiega.pl/buty-do-biegania-z-maksymalna-amortyzacja-przeglad/'
 request = requests.get(url)
+# print(request.text)
 soup = BeautifulSoup(request.text, 'html.parser')
+print(type(soup));
 kolumnny = {}
 i = 0
 nazwy = soup.find('tr', attrs='row-1')
