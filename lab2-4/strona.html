@@ -1,23 +1,44 @@
-<html class="">
+<html>
+    <!-- <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+
+        .grid-container {
+        grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+        } 
+    </style> -->
     <head class="">
         <link href="output.css" rel="stylesheet">
     </head>
-    <header class="h-24 bg-gray-900">
+    <header class="h-24 bg-gray-900 ">
         <div class="text-center py-5">
                 <h2 class="text-gray-400 uppercase text-5xl">
                     strona o bieganiu
                 </h2>
         </div>
     </header>
-    <article class="bg-gray-700 text-gray-400   ">
-        <!-- <h2>
-            Ponizej prezentuja sie rekordy swiata na 100m z podzialem na gatunki oraz plec
-        </h2> -->
-        
-        <div class="bg-gray-700">
-            <center>
+    <div class="grid grid-cols-5 gap-4 bg-gray-700 px-4 pt-4">
+    <div class="px-4 bg-gray-500 text-gray-900 text-xl font-semibold">
+        Zawartosc strony:
+        <ul class="list-disc list-inside font-normal text-lg text-papiez-blue">
+            <li><a class="hover:underline" href="#tabela">Tabela</a></li>
+            <li><a class="hover:underline" href="#filmik">Uroczy filmik</a></li>
+            <li><a class="hover:underline" href="#wyniki_amala">Wyniki dr. A. Malinowskiego</a></li>
+            <li><a class="hover:underline" href="#obrazek">Obrazek</a></li>
+        </ul>
 
-                <table class="text-sm text-left text-gray-500 dark:text-gray-400">
+    </div>
+    <article class="bg-gray-700 text-gray-400 col-start-2 col-span-3">
+        <center>
+        <div class="bg-gray-700">
+
+                <table class="text-sm text-left text-gray-500 dark:text-gray-400" id="tabela">
                     <div class="text-gray-400 text-lg">
                         rekordy w biegu na 100m z podzialem na gatunki i plec
                     </div>
@@ -46,9 +67,8 @@
                 </tr>
                 </tbody>
                 </table>
-            </center>
         </div>
-        <center>
+        <!-- <center> -->
         <div class="text-gray-400 text-sm">
             ** <a href="https://www.superkid.pl/quiz-slimaki-odpowiedzi"
                 class="text-blue-600 font-medium hover:underline">źródło</a>
@@ -56,34 +76,37 @@
             <div class="">
                 <div class="text-gray-400 text-sm">
                     *tak na prawdę nie wiem jaki jest rekord, ale trafiłem ostatnio na bardzo uroczy 
-                    <a href="https://www.youtube.com/watch?v=vsvoTjTIaN8" class="text-blue-600 font-medium hover:underline">
+                    <a id="filmik" href="https://www.youtube.com/watch?v=vsvoTjTIaN8" class="text-blue-600 font-medium hover:underline">
                         filmik</a>, w którym pies osiągnął własnie taki wynik:
                 </div>
                     <iframe class="" width="420" height="315" src="https://www.youtube.com/embed/vsvoTjTIaN8">
                     </iframe>
             </div><br>
         <div class="bg-gray-500 shadow-2xl text-gray-900">
-                <h2 class="font-bold text-lg">Lista wyników dr. Adama Malinowskiego w poszczególnych zawodach organizowanych przez Fundację Maraton Warszawski:</h2>
-                    <ul class="list-disc list-inside">
-                        <li><em>6 Półmaraton Warszawski </em> (2011): <strong> 1:51:32 </strong></li>
-                        <li><em>8 Półmaraton Warszawski </em>(2013): <strong> 1:34:59 </strong></li>
-                        <li><em>10 Półmaraton Warszawski </em>(2015): <strong> 1:32:50 </strong></li>
-                        <li><em>11 Półmaraton Warszawski </em>(2016): <strong> 1:30:52 </strong></li>
+                <h2 id="wyniki_amala" class="font-bold text-lg">Lista wyników dr. Adama Malinowskiego w poszczególnych zawodach organizowanych przez Fundację Maraton Warszawski:</h2>
+                    <ul class="list-disc list-inside flex flex-row items-center">
+                        <div class="flex flex-col items-center self-center grow">
+                            <li><em>6 Półmaraton Warszawski </em> (2011): <br> <strong> 1:51:32 </strong></li>
+                            <li><em>8 Półmaraton Warszawski </em>(2013): <br> <strong> 1:34:59 </strong></li>
+                            <li><em>10 Półmaraton Warszawski </em>(2015): <br> <strong> 1:32:50 </strong></li>
+                            <li><em>11 Półmaraton Warszawski </em>(2016): <br> <strong> 1:30:52 </strong></li>
+                        </div>
                         <br>
-                        <li><em>33 Maraton Warszawski</em> (2011): <strong> 4:03:08 </strong></li>
-                        <li><em>34 Maraton Warszawski</em> (2012): <strong> 3:41:41 </strong></li>
-                        <li><em>35 Maraton Warszawski</em> (2013): <strong> 3:37:43 </strong></li>
+                        <div class="flex flex-col items-center grow">
+                            <li><em>33 Maraton Warszawski</em> (2011): <br> <strong> 4:03:08 </strong></li>
+                            <li><em>34 Maraton Warszawski</em> (2012): <br> <strong> 3:41:41 </strong></li>
+                            <li><em>35 Maraton Warszawski</em> (2013): <br> <strong> 3:37:43 </strong></li>
+                        </div>
                     </ul>
         </div>
 
         <br><br>
-                <div class="text-xl">
+                <div class="text-xl" id="obrazek">
                     Niestety są to <strong>bardzo</strong> długie dystany które blokują sporą część miasta
                 </div> <br>
             <div class="" >
                 <img src="zablokowana_ulica.jpg" alt="Italian Trulli" width="480" height="310">
             </div> <br>
-        </div>
         <form class="text-lg">
             <label for="large-input" class="block">Jak oceniasz takie blokowanie miasta?</label> <br>
                 <input type="text" class="block text-gray-900 rounded-lg w-96 h-12 text-base px-2"><br>
@@ -134,9 +157,10 @@
                 </map>
             </div>
         </div>
-        <footer>
-            Dziękuję za uwagę, pozdrawiam, życzę miłego dnia i smacznej kawusi
-        </footer>
         </center>
     </article>
+    <footer class="col-span-5 text-center text-gray-400">
+        Dziękuję za uwagę, pozdrawiam, życzę miłego dnia i smacznej kawusi ☕🐈
+    </footer>
+    </div>
 </html>
