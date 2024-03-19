@@ -1,5 +1,5 @@
 <html>
-    <!-- <style>
+    <style>
         .item1 { grid-area: header; }
         .item2 { grid-area: menu; }
         .item3 { grid-area: main; }
@@ -7,34 +7,48 @@
         .item5 { grid-area: footer; }
 
         .grid-container {
-        grid-template-areas:
+            display: grid;
+            grid-template-areas:
             'header header header header header header'
             'menu main main main right right'
             'menu footer footer footer footer footer';
-        } 
-    </style> -->
+            gap: 10px;
+            /* background-color: #2196F3; */
+            padding: 10px;
+        }
+
+        .grid-container > div {
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        /* text-align: center; */
+        /* padding: 20px 0; */
+        font-size: 30px;
+        }
+    </style>
     <head class="">
         <link href="output.css" rel="stylesheet">
     </head>
-    <header class="h-24 bg-gray-900 ">
+
+    <div class="grid-container bg-gray-700">
+
+    <header class="h-24 bg-gray-900 item1">
         <div class="text-center py-5">
                 <h2 class="text-gray-400 uppercase text-5xl">
                     strona o bieganiu
                 </h2>
         </div>
     </header>
-    <div class="grid grid-cols-5 gap-4 bg-gray-700 px-4 pt-4">
-    <div class="px-4 bg-gray-500 text-gray-900 text-xl font-semibold">
-        Zawartosc strony:
-        <ul class="list-disc list-inside font-normal text-lg text-papiez-blue">
+    <!-- <div class=" bg-gray-700 px-4 pt-4"> -->
+        <div class="bg-gray-500 text-gray-800 text-lg font-medium text-left item2">
+        <div class="px-4">Zawartosc strony:</div>
+        <ul class="list-disc list-inside font-normal text-lg text-papiez-blue text-left px-4">
             <li><a class="hover:underline" href="#tabela">Tabela</a></li>
             <li><a class="hover:underline" href="#filmik">Uroczy filmik</a></li>
             <li><a class="hover:underline" href="#wyniki_amala">Wyniki dr. A. Malinowskiego</a></li>
             <li><a class="hover:underline" href="#obrazek">Obrazek</a></li>
         </ul>
+        </div>
 
-    </div>
-    <article class="bg-gray-700 text-gray-400 col-start-2 col-span-3">
+    <article class="bg-gray-700 text-gray-400 item3">
         <center>
         <div class="bg-gray-700">
 
@@ -159,8 +173,9 @@
         </div>
         </center>
     </article>
-    <footer class="col-span-5 text-center text-gray-400">
+    <footer class="item5 text-center text-gray-400 pr-20">
         Dziękuję za uwagę, pozdrawiam, życzę miłego dnia i smacznej kawusi ☕🐈
     </footer>
+    <!-- </div> -->
     </div>
 </html>
