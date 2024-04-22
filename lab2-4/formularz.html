@@ -1,0 +1,96 @@
+<html>
+    <style>
+        .page {
+            background: #3a3b3d;
+            background-color: #3a3b3d;
+            color: #b4b4b4;
+            height: 100%;
+            padding: 5%;
+        }
+
+        .input {
+            background-color: black;
+            /* background-position: 10px 10px; */
+            /* background-repeat: no-repeat; */
+            padding-left: 40px;
+        }
+        .form-control:valid {
+            background-color:  #5b5e60!important;
+            color: #4b4b4b;
+        }
+
+        .form-text {
+            color: #b4b4b4!important;
+        }
+
+        .header {
+            background: #3a3b3d;
+            background-color: #3a3b3d;
+            color: #b4b4b4;
+            /* border-bottom: #3a3b3d; */
+        }
+
+        .muted {
+            color: #6c6c6c!important;
+        }
+
+    </style>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+    </head>
+    <div class="page">
+        <h2 class="header text-center">
+            Formularz do zbierania różnych danych
+        </h2>
+        <form>
+            <div class="form-group">
+                <label for="inputText">Wpisz tutaj jakiś tekst</label>
+                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> -->
+                <input type="text" class="form-control" id="inputText" placeholder="Wpisz tekst" required>
+                <div class="form-text">Może być wierszyk, coś miłego, inwokacja do Pana Tadeusza, albo dane karty płatniczej</div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkbox" required>
+                    <label class="form-check-label" for="checkbox">Potwierdzam, że powyższe dane pochodzą z legalnego źródła</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputText">Powyżej wpisałem/am:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioOption1" value="option1" checked>
+                    <label class="form-check-label" for="radioOption1">Wierszyk</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioOption2" value="option2">
+                    <label class="form-check-label" for="radioOption2">Miłe słowa</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioOption2" value="option2">
+                    <label class="form-check-label" for="radioOption2">Dane karty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioGroup" id="radioOption2" value="option2">
+                    <label class="form-check-label" for="radioOption2">Coś innego (niespodziankę)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="select">
+                    Wybierz kwotę, którą obciążymy twoją kartę <span class="muted">(jeśli podano dane)</span>
+                </label>
+                <select class="form-control" id="select">
+                    <option>Wybierz opcję...</option>
+                    <option>10zł</option>
+                    <option>50zł</option>
+                    <option>100zł</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</html>
